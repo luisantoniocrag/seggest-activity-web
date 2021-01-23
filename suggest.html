@@ -7,6 +7,34 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <header>
+        <ul id="menu">
+            <li><a id="homeLink" href="./index.html">🏠Home</a></li>
+            <li><a id="suggestAcctivityLink" href="./suggest.html">🚀Suggest an Activity</a></li>
+        </ul>
+        <button><img src="./assets/reload.svg" alt="reload"></button>
+        <button id="themeSwitch"><img id="imageSwitch" src="" alt="reload"></button>
+    </header>
+
+    <main id="home">
+        <div class="box-wrapper">
+            <form action="">
+                <h4>🚀Suggest an Activity</h4>
+
+                <lable>Email (We won't spam you)</lable>
+                <input type="text" placeholder="Enter your email address" />
+
+                <lable>Title</lable>
+                <input type="text" placeholder="Enter the title of the activity" />
+
+                <lable>Description</lable>
+                <input type="text" placeholder="Enter the description of the activity" />
+
+                <button id="submitButton">Submit</button>
+            </form>
+        </div>
+    </main>
+
     <script src="./script.js"></script>
 </body>
 </html>
