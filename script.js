@@ -1,5 +1,7 @@
 // Selectores de Elementos
 const body = document.getElementsByTagName("BODY")[0];
+const nav = document.getElementsByTagName("nav")[0];
+const header = document.getElementsByTagName("header")[0];
 const themeSwitch = document.getElementById("themeSwitch");
 const themeSwitchMobil = document.getElementById("themeSwitchMobil");
 const imageSwitch = document.getElementById("imageSwitch");
@@ -39,57 +41,6 @@ if (!getLocalStorage("themeSuggestActivity") || getLocalStorage("themeSuggestAct
     suggestAcctivity.style.color = "white";
 }
 
-// Este evento se aplica sobre el elemento themeSwitch
-// Si es aplicado se cambian los colores y otras cosas
-themeSwitch.addEventListener("click", () => {
-    if (getLocalStorage("themeSuggestActivity") == 1) {
-        setLocalStorage("themeSuggestActivity", "0");
-        body.style.backgroundColor = "white";
-        mobilMenu.style.backgroundColor = "white"
-
-        suggestAcctivity.style.color = "black";
-        body.style.color = "black";
-        imageSwitch.src = "./assets/monitor-levels.svg";
-        home.style.color = "black";
-    }
-    else {
-        setLocalStorage("themeSuggestActivity", "1");
-        body.style.backgroundColor = "black";
-        mobilMenu.style.backgroundColor = "black"
-
-        suggestAcctivity.style.color = "white";
-        body.style.backgroundColor = "black";
-        body.style.color = "white";
-        imageSwitch.src = "./assets/moon-half-visible-face-on-light-and-half-on-darkness.svg";
-        home.style.color = "white";
-    }
-});
-
-
-themeSwitchMobil.addEventListener("click", () => {
-    if (getLocalStorage("themeSuggestActivity") == 1) {
-        setLocalStorage("themeSuggestActivity", "0");
-        body.style.backgroundColor = "white";
-        mobilMenu.style.backgroundColor = "white"
-
-        suggestAcctivity.style.color = "black";
-        body.style.color = "black";
-        imageSwitch.src = "./assets/monitor-levels.svg";
-        home.style.color = "black";
-    }
-    else {
-        setLocalStorage("themeSuggestActivity", "1");
-        body.style.backgroundColor = "black";
-        mobilMenu.style.backgroundColor = "black"
-
-        suggestAcctivity.style.color = "white";
-        body.style.backgroundColor = "black";
-        body.style.color = "white";
-        imageSwitch.src = "./assets/moon-half-visible-face-on-light-and-half-on-darkness.svg";
-        home.style.color = "white";
-    }
-});
-
 //hidden/visible menu for mobile devices
 hamburgerButton.addEventListener("click", () => {
     if (mobilMenu.style.display == "none") {
@@ -98,3 +49,59 @@ hamburgerButton.addEventListener("click", () => {
         mobilMenu.style.display = "none";
     }
 });
+
+// Este evento se aplica sobre el elemento themeSwitch
+// Si es aplicado se cambian los colores y otras cosas
+if (themeSwitch) {
+    themeSwitch.addEventListener("click", () => {
+        if (getLocalStorage("themeSuggestActivity") == 1) {
+            setLocalStorage("themeSuggestActivity", "0");
+            body.style.backgroundColor = "white";
+            mobilMenu.style.backgroundColor = "white"
+    
+            suggestAcctivity.style.color = "black";
+            body.style.color = "black";
+            imageSwitch.src = "./assets/monitor-levels.svg";
+            home.style.color = "black";
+        }
+        else {
+            setLocalStorage("themeSuggestActivity", "1");
+            body.style.backgroundColor = "black";
+            mobilMenu.style.backgroundColor = "black"
+    
+            suggestAcctivity.style.color = "white";
+            body.style.backgroundColor = "black";
+            body.style.color = "white";
+            imageSwitch.src = "./assets/moon-half-visible-face-on-light-and-half-on-darkness.svg";
+            home.style.color = "white";
+        }
+    });
+}
+
+if (themeSwitchMobil) {
+    themeSwitchMobil.addEventListener("click", () => {
+        if (getLocalStorage("themeSuggestActivity") == 1) {
+            setLocalStorage("themeSuggestActivity", "0");
+            body.style.backgroundColor = "white";
+            mobilMenu.style.backgroundColor = "white"
+    
+            suggestAcctivity.style.color = "black";
+            body.style.color = "black";
+            imageSwitch.src = "./assets/monitor-levels.svg";
+            home.style.color = "black";
+        }
+        else {
+            setLocalStorage("themeSuggestActivity", "1");
+            body.style.backgroundColor = "black";
+            mobilMenu.style.backgroundColor = "black"
+    
+            suggestAcctivity.style.color = "white";
+            body.style.backgroundColor = "black";
+            body.style.color = "white";
+            imageSwitch.src = "./assets/moon-half-visible-face-on-light-and-half-on-darkness.svg";
+            home.style.color = "white";
+        }
+    });
+}
+
+

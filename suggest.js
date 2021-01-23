@@ -16,9 +16,11 @@ body.addEventListener("keydown", (e) => {
 });
 
 //mobil tap event
-screen.addEventListener("touchstart", handleStart);
+if (screen) {
+    screen.addEventListener("touchstart", handleStart);
 
-function handleStart(evt) {
-    evt.preventDefault();
-    text.innerHTML = "Learn a new Languaje";
+    function handleStart(evt) {
+        evt.preventDefault();
+        text.innerHTML = "Learn a new Languaje";
+    }
 }
