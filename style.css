@@ -143,6 +143,12 @@ button img {
 }
 
 /*-----------------------------------------------------------------Mobil Nav*/
+
+nav {
+    display: none;
+}
+
+
 nav #hamburguerButton {
     width: 45px;
     height: 45px;
@@ -186,4 +192,10 @@ nav #hamburguerButton div {
 #menuMobil ul li a {
    color: inherit;
    text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+    nav {
+        display: block;
+    }
 }
