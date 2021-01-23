@@ -9,20 +9,21 @@
 </head>
 <body>
     <header>
-        <ul>
-            <li><a href="./index.html">🏠Home</a></li>
-            <li><a href="./suggest.html">🚀Suggest an Activity</a></li>
+        <ul id="menu">
+            <li><a id="homeLink" href="./index.html">🏠Home</a></li>
+            <li><a id="suggestAcctivityLink" href="./suggest.html">🚀Suggest an Activity</a></li>
         </ul>
-        <button>Ref</button>
-        <button>Dark</button>
+        <button><img src="./assets/reload.svg" alt="reload"></button>
+        <button id="themeSwitch"><img id="imageSwitch" src="" alt="reload"></button>
     </header>
 
     <main id="home">
         <div class="text-wrapper">
-            <h3>Press space bar or the regenerate button (💻) Tap here (📱) to generate an activity</h3>
+            <h3 id="text">Press space bar or the regenerate button (💻) Tap here (📱) to generate an activity</h3>
         </div>
     </main>
 
     <script src="./script.js"></script>
+    <script src="suggest.js"></script>
 </body>
 </html>
