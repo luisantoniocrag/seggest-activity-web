@@ -1,6 +1,6 @@
 // Selector
+const main = document.getElementsByTagName("main")[0];
 const text = document.getElementById("text");
-const screen = document.getElementsByTagName("canvas")[0];
 const reloadButton = document.getElementById("reload");
 
 //Desktop Reload button event
@@ -16,11 +16,10 @@ body.addEventListener("keydown", (e) => {
 });
 
 //mobil tap event
-if (screen) {
-    screen.addEventListener("touchstart", handleStart);
-
-    function handleStart(evt) {
-        evt.preventDefault();
+if (themeSwitchMobil) {
+    main.addEventListener("touchend",(e) => {
+        console.log(e)
+        e.preventDefault();
         text.innerHTML = "Learn a new Languaje";
-    }
+    });
 }
