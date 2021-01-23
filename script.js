@@ -7,7 +7,6 @@ const suggestAcctivity = document.getElementById("suggestAcctivityLink");
 const hamburgerButton = document.getElementById("hamburguerButton");
 const mobilMenu = document.getElementById("menuMobil");
 
-
 mobilMenu.style.display = "none";
 
 // si existe el key en localStorage va a retornar su value
