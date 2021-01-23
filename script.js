@@ -1,6 +1,7 @@
 // Selectores de Elementos
 const body = document.getElementsByTagName("BODY")[0];
 const themeSwitch = document.getElementById("themeSwitch");
+const themeSwitchMobil = document.getElementById("themeSwitchMobil");
 const imageSwitch = document.getElementById("imageSwitch");
 const home = document.getElementById("homeLink");
 const suggestAcctivity = document.getElementById("suggestAcctivityLink");
@@ -23,6 +24,7 @@ function setLocalStorage(key, value) {
 // En caso contrario colocar el tema dark
 if (!getLocalStorage("themeSuggestActivity") || getLocalStorage("themeSuggestActivity") == 0) {
     body.style.backgroundColor = "white";
+    mobilMenu.style.backgroundColor = "white"
     imageSwitch.src = "./assets/monitor-levels.svg"
     body.style.color = "black";
     home.style.color = "black";
@@ -30,6 +32,7 @@ if (!getLocalStorage("themeSuggestActivity") || getLocalStorage("themeSuggestAct
 
 } else {
     body.style.backgroundColor = "black"
+    mobilMenu.style.backgroundColor = "black"
     imageSwitch.src = "./assets/moon-half-visible-face-on-light-and-half-on-darkness.svg"
     body.style.color = "white";
     home.style.color = "white";
@@ -42,22 +45,50 @@ themeSwitch.addEventListener("click", () => {
     if (getLocalStorage("themeSuggestActivity") == 1) {
         setLocalStorage("themeSuggestActivity", "0");
         body.style.backgroundColor = "white";
+        mobilMenu.style.backgroundColor = "white"
+
+        suggestAcctivity.style.color = "black";
         body.style.color = "black";
         imageSwitch.src = "./assets/monitor-levels.svg";
         home.style.color = "black";
-        suggestAcctivity.style.color = "black";
     }
     else {
         setLocalStorage("themeSuggestActivity", "1");
         body.style.backgroundColor = "black";
-        body.style.backgroundColor = "black"
+        mobilMenu.style.backgroundColor = "black"
+
+        suggestAcctivity.style.color = "white";
+        body.style.backgroundColor = "black";
         body.style.color = "white";
         imageSwitch.src = "./assets/moon-half-visible-face-on-light-and-half-on-darkness.svg";
         home.style.color = "white";
-        suggestAcctivity.style.color = "white";
     }
 });
 
+
+themeSwitchMobil.addEventListener("click", () => {
+    if (getLocalStorage("themeSuggestActivity") == 1) {
+        setLocalStorage("themeSuggestActivity", "0");
+        body.style.backgroundColor = "white";
+        mobilMenu.style.backgroundColor = "white"
+
+        suggestAcctivity.style.color = "black";
+        body.style.color = "black";
+        imageSwitch.src = "./assets/monitor-levels.svg";
+        home.style.color = "black";
+    }
+    else {
+        setLocalStorage("themeSuggestActivity", "1");
+        body.style.backgroundColor = "black";
+        mobilMenu.style.backgroundColor = "black"
+
+        suggestAcctivity.style.color = "white";
+        body.style.backgroundColor = "black";
+        body.style.color = "white";
+        imageSwitch.src = "./assets/moon-half-visible-face-on-light-and-half-on-darkness.svg";
+        home.style.color = "white";
+    }
+});
 
 //hidden/visible menu for mobile devices
 hamburgerButton.addEventListener("click", () => {

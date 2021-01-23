@@ -157,14 +157,12 @@ nav #hamburguerButton {
     position: fixed;
     right: 2.5%;
     margin-top: 1rem;
-    z-index: 11;
-
-}
+    z-index: 11;}
 
 nav #hamburguerButton div {
     width: 50%;
     height: 4px;
-    background-color: rgba(0, 0, 0, 0.096);
+    background-color: rgba(122, 122, 122, 0.432);
     margin-bottom: 0.2rem;
 }
 
@@ -186,7 +184,7 @@ nav #hamburguerButton div {
 
 #menuMobil ul li {
     padding: 0.5rem;
-    border: 1px solid rgba(0, 0, 0, 0.322);
+    border: 1px solid rgba(122, 122, 122, 0.432);
 }
 
 #menuMobil ul li a {
