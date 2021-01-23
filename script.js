@@ -4,6 +4,11 @@ const themeSwitch = document.getElementById("themeSwitch");
 const imageSwitch = document.getElementById("imageSwitch");
 const home = document.getElementById("homeLink");
 const suggestAcctivity = document.getElementById("suggestAcctivityLink");
+const hamburgerButton = document.getElementById("hamburguerButton");
+const mobilMenu = document.getElementById("menuMobil");
+
+
+mobilMenu.style.display = "none";
 
 // si existe el key en localStorage va a retornar su value
 // si no existe el key retornará null
@@ -51,5 +56,15 @@ themeSwitch.addEventListener("click", () => {
         imageSwitch.src = "./assets/moon-half-visible-face-on-light-and-half-on-darkness.svg";
         home.style.color = "white";
         suggestAcctivity.style.color = "white";
+    }
+});
+
+
+//hidden/visible menu for mobile devices
+hamburgerButton.addEventListener("click", () => {
+    if (mobilMenu.style.display == "none") {
+        mobilMenu.style.display = "block";
+    } else {
+        mobilMenu.style.display = "none";
     }
 });
