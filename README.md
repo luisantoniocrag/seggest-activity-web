@@ -1,1 +1,1 @@
-# seggest-activity-web
+# suggest-activity-web
